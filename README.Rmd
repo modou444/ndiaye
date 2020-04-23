@@ -12,7 +12,7 @@ chunk_output_type: console
 
 
 ```{r}
-setwd("~/MSS/projet d'expertise/projet1")
+setwd("~/MSS/projet d'expertise/projet1/ndiayemodou")
 Donnees<-read.csv("data_ulule_2019-1.csv",header = TRUE,sep = ";")
 
 

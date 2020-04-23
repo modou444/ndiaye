@@ -4,7 +4,7 @@ Modou
 22 avril 2020
 
 ``` r
-setwd("~/MSS/projet d'expertise/projet1")
+setwd("~/MSS/projet d'expertise/projet1/ndiayemodou")
 Donnees<-read.csv("data_ulule_2019-1.csv",header = TRUE,sep = ";")
 
 
@@ -157,3 +157,8 @@ plot(as.integer( donnee[donnee$category=="Film et vidéo", "annee"]), donnee[don
 ```
 
 ![](README_files/figure-markdown_github/unnamed-chunk-6-1.png)
+
+Application shiny
+=================
+
+Voici le lien pour acceder a l'application : <https://modou-abdoulaye44.shinyapps.io/ndiayemodou/>
