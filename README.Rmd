@@ -148,3 +148,10 @@ plot(as.integer( donnee[donnee$category=="Musique", "annee"]), donnee[donnee$cat
 plot(as.integer( donnee[donnee$category=="Film et vidéo", "annee"]), donnee[donnee$category=="Film et vidéo", "proportion"],main="categorie: Art & Photo",xlab="evolution par annee", ylab="proportion des campagnes financees",type = "l")
 ```
 
+
+
+# Application shiny
+
+Voici le lien pour acceder a l'application : https://modou-abdoulaye44.shinyapps.io/ndiayemodou/
+
+
