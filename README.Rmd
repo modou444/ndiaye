@@ -11,7 +11,14 @@ chunk_output_type: console
 ---
 
 
-```{r}
+
+```{r setup,include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, message=FALSE,warning = FALSE)
+```
+
+
+
+```{r,echo=FALSE}
 setwd("~/MSS/projet d'expertise/projet1/ndiayemodou")
 Donnees<-read.csv("data_ulule_2019-1.csv",header = TRUE,sep = ";")
 
@@ -24,7 +31,7 @@ attach(Donnees)
 ```
 
 
-```{r}
+```{r,echo=FALSE}
 
 data<-Donnees[order(country),] %>%
   filter(is_cancelled==FALSE)
@@ -36,11 +43,6 @@ data<-Donnees[order(country),] %>%
   
 
 
-"compter pour chaque pays le nombre de campagne
-data_3<-data %>%
-  count(country) %>%
-  group_by(country) %>%
-  arrange(desc(n)) "
 
 
 
@@ -52,7 +54,7 @@ data_2 <- subset(data, country == "FR" | country=="BE" | country=="IT" | country
 
 
 
-```{r}
+```{r,echo=FALSE}
 data_3<-data_2 %>% 
   select(c(3,7,14))
 
@@ -134,18 +136,18 @@ donnee <- merge(donnee,count,by=c("annee","category"), all=TRUE)
 
 
 
-```{r}
+```{r,echo=FALSE}
 plot(as.integer( donnee[donnee$category=="Autres projets", "annee"]), donnee[donnee$category=="Autres projets", "count"],main="categorie: Autres projet",xlab="evolution par annee", ylab="nombre total de campagne financees",type = "l")
 ```
 
 
-```{r}
+```{r,echo=FALSE}
 plot(as.integer( donnee[donnee$category=="Musique", "annee"]), donnee[donnee$category=="Musique", "moyenne"],main="categorie: Musique",xlab="evolution par annee", ylab="moyenne des campagnes financees",type = "l")
 ```
 
 
-```{r}
-plot(as.integer( donnee[donnee$category=="Film et vidéo", "annee"]), donnee[donnee$category=="Film et vidéo", "proportion"],main="categorie: Art & Photo",xlab="evolution par annee", ylab="proportion des campagnes financees",type = "l")
+```{r,echo=FALSE}
+plot(as.integer( donnee[donnee$category=="Spectacle vivant", "annee"]), donnee[donnee$category=="Spectacle vivant", "proportion"],main="categorie: Spectacle vivant",xlab="evolution par annee", ylab="proportion des campagnes financees",type = "l")
 ```
 
 

@@ -4,42 +4,6 @@ Modou
 22 avril 2020
 
 ``` r
-setwd("~/MSS/projet d'expertise/projet1/ndiayemodou")
-Donnees<-read.csv("data_ulule_2019-1.csv",header = TRUE,sep = ";")
-
-
-library(readr)
-library(dplyr)
-```
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-``` r
-library(ggplot2)
-library(lubridate)
-```
-
-    ## 
-    ## Attaching package: 'lubridate'
-
-    ## The following object is masked from 'package:base':
-    ## 
-    ##     date
-
-``` r
-attach(Donnees)
-```
-
-``` r
 data<-Donnees[order(country),] %>%
   filter(is_cancelled==FALSE)
 
@@ -153,7 +117,7 @@ plot(as.integer( donnee[donnee$category=="Musique", "annee"]), donnee[donnee$cat
 ![](README_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
 ``` r
-plot(as.integer( donnee[donnee$category=="Film et vidéo", "annee"]), donnee[donnee$category=="Film et vidéo", "proportion"],main="categorie: Art & Photo",xlab="evolution par annee", ylab="proportion des campagnes financees",type = "l")
+plot(as.integer( donnee[donnee$category=="Spectacle vivant", "annee"]), donnee[donnee$category=="Spectacle vivant", "proportion"],main="categorie: Spectacle vivant",xlab="evolution par annee", ylab="proportion des campagnes financees",type = "l")
 ```
 
 ![](README_files/figure-markdown_github/unnamed-chunk-6-1.png)
